@@ -35,8 +35,8 @@ def product(request):
     if form.is_valid():
       prod = form.save(commit=False)
 
-      print(form.data)
-
+      form.save()
+      
       messages.success(request, 'Product saved.')
       form = ProductModelForm()
     else:
